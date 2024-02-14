@@ -19,7 +19,8 @@ const TranslationsProvider: FC<PropsWithChildren<Props>> = ({
   const getLanguageFromCookies = (): Language => {
     const language = cookies?.get(Cookie.LANGUAGE);
 
-    return [Language.NL, Language.NB, Language.NN, Language.EN].includes(language)
+// RH: WIP:    return [Language.NL, Language.NB, Language.NN, Language.EN].includes(language)
+    return [Language.NB, Language.NN, Language.EN].includes(language)
       ? language
       : Language.NB;
   };

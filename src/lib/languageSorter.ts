@@ -4,8 +4,8 @@ import type { TextLanguage } from '../types';
 const priorities: Record<string, number> = {
   [Language.NB]: 1,
   [Language.NN]: 2,
-  [Language.EN]: 3,
-  [Language.NL]: 4,
+  [Language.EN]: 3
+// RH: WIP:  [Language.NL]: 4,
 };
 
 export const languageSorter = (languageArray: Partial<TextLanguage>[]) =>

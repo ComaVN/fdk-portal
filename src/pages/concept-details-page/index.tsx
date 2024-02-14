@@ -87,8 +87,8 @@ const ConceptDetailsPage: FC<Props> = ({
   const [selectedLanguages, setSelectedLanguages] = useState<Language[] | []>([
     { code: 'nb' },
     { code: 'nn' },
-    { code: 'en' },
-    { code: 'nl' },
+    { code: 'en' }
+    // RH: WIP: { code: 'nl' },
   ]);
 
   const renderPage = isLoadingConcept || !isMounted || concept !== null;
@@ -105,7 +105,8 @@ const ConceptDetailsPage: FC<Props> = ({
 
     return function cleanup() {
       setIsMounted(false);
-      setSelectedLanguages([{ code: 'nb' }, { code: 'nn' }, { code: 'en' }, { code: 'nl' }]);
+      setSelectedLanguages([{ code: 'nb' }, { code: 'nn' }, { code: 'en' }]);
+// RH: WIP: setSelectedLanguages([{ code: 'nb' }, { code: 'nn' }, { code: 'en' }, { code: 'nl' }]);
       resetConcepts();
       resetConceptsRelations();
       resetDatasetsRelations();
@@ -135,7 +136,8 @@ const ConceptDetailsPage: FC<Props> = ({
                 )
               ),
               (__: any, v: string) => !!v
-            ).filter(key => ['nb', 'nn', 'no', 'en', 'nl'].includes(key))
+            ).filter(key => ['nb', 'nn', 'no', 'en'].includes(key))
+// RH: WIP:            ).filter(key => ['nb', 'nn', 'no', 'en', 'nl'].includes(key))
           )
         ]
       : [];

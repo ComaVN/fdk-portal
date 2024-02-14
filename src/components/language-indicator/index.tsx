@@ -19,7 +19,7 @@ const languageTitle = (language: string) => {
     case 'nn':
       return 'Nynorsk';
     case 'nl':
-      return 'Nederlands';
+      return 'NederlandsWIP';
     default:
       return '';
   }
