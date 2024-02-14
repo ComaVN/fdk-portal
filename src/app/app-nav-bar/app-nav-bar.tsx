@@ -337,7 +337,12 @@ const languageButtons = ({
     <SC.Button type='button' onClick={() => onChangeLanguage('en')} lang='en'>
       {localization.lang['english-en']}
     </SC.Button>
-  </li>
+  </li>,
+  <li>
+    <SC.Button type='button' onClick={() => onChangeLanguage('nl')} lang='nl'>
+      {localization.lang['dutch-nl']}
+    </SC.Button>
+  </li>,
 ];
 const Logo = getConfig().useDemoLogo ? <SC.DemoLogo /> : <SC.Logo />;
 

@@ -178,6 +178,7 @@ export enum LanguageCodes {
   nn = 'nn',
   en = 'en',
   no = 'no',
+  nl = 'nl',
   none = ''
 }
 
